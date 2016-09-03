@@ -22,7 +22,7 @@ namespace Shivgarjana.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Shri Shiva Mandir Sydney";
 
             return View();
         }
