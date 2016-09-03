@@ -1,13 +1,17 @@
 ﻿@model Shivgarjana.Models.Event.Event
 
-<div>
-    <div>
-        @Html.LabelFor(m => m.Title)
-        @Html.DisplayTextFor(m => m.Title)
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="accordion" href="#@Model.EventID">
+            @Html.DisplayTextFor(m => m.Title)
+        </a>            
+        </h4>
     </div>
-    <div>
-        @Html.LabelFor(m => m.Description)
-        @Html.DisplayTextFor(m => m.Description)
+    <div id="@Model.EventID" class="panel-collapse collapse ">
+        <div class="panel-body">
+            @Html.DisplayTextFor(m => m.Description)
+        </div>
     </div>
 </div>
 

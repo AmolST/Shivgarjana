@@ -24,7 +24,7 @@ namespace Shivgarjana.Seed
             });
             Events.Add(new Event
             {
-                EventID = 1,
+                EventID = 2,
                 Title = "Helensburg Ganesh Procession",
                 Description = "Helensburg Ganesh Procession",
                 DateTime = new DateTime(2016, 9, 11),

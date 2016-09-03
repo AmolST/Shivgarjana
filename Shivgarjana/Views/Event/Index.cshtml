@@ -5,8 +5,12 @@
 }
 
 <h2>All events</h2>
-@foreach(var model in Model)
-{
-    @Html.Partial("_EventDetails", model)
-}
+<div class="container">
+    <div id="accordion" class="panel-group">
+        @foreach (var model in Model)
+        {
+            @Html.Partial("_EventDetails", model)
+        }
+    </div>  
+</div>
 
