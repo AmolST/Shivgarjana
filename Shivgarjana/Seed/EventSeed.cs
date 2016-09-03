@@ -22,7 +22,13 @@ namespace Shivgarjana.Seed
                 Description = "Telagu Ganesh Procession",
                 DateTime = new DateTime(2016,9,10),
                 Location = new Location { LocationID = 1, Suburb = "Parrmatta", State = "NSW" , Country = "Australia"},
-                Gallery = new Gallery { GalleryID = 1, Title = "Telagu mandal", Description = "Telagu mandal", MultimediaType = MultimediaType.Photo, Url = "./Content/Images/Telagu_Mandal_Ganesha.jpg" }
+                Media = new List<Gallery> {
+                                            new Gallery {
+                                                GalleryID = 1,
+                                                Title = "Telagu mandal",
+                                                Description = "Telagu mandal",
+                                                MultimediaType = MultimediaType.Photo,
+                                                Url = "./Content/Images/Telagu_Mandal_Ganesha.jpg" } }
             });
 
             Events.Add(new Event
@@ -32,7 +38,13 @@ namespace Shivgarjana.Seed
                 Description = "Helensburg Ganesh Procession",
                 DateTime = new DateTime(2016, 9, 11),
                 Location = new Location { LocationID = 2, Suburb = "Helensburg", State = "NSW", Country = "Australia" },
-                Gallery = new Gallery { GalleryID = 2, Title = "Helensburg mandal", Description = "Helensburg mandal",  MultimediaType = MultimediaType.Photo, Url = "./Content/Images/Helensburg_Ganesha.jpg" }
+                Media = new List<Gallery> {
+                                            new Gallery {
+                                                GalleryID = 2,
+                                                Title = "Helensburg mandal",
+                                                Description = "Helensburg mandal",
+                                                MultimediaType = MultimediaType.Photo,
+                                                Url = "./Content/Images/Helensburg_Ganesha.jpg" } }
             });
 
             Events.Add(new Event
@@ -42,7 +54,19 @@ namespace Shivgarjana.Seed
                 Description = "Helensburg Ganesh Procession",
                 DateTime = new DateTime(2015, 9, 11),
                 Location = new Location { LocationID = 2, Suburb = "Helensburg", State = "NSW", Country = "Australia" },
-                Gallery = new Gallery { GalleryID = 2, Title = "Helensburg mandal", Description = "Helensburg mandal", MultimediaType = MultimediaType.Photo, Url = "./Content/Images/Helensburg_Ganesha.jpg" }
+                Media = new List<Gallery> {
+                                            new Gallery {
+                                                GalleryID = 1,
+                                                Title = "Helensburg mandal",
+                                                Description = "Helensburg mandal",
+                                                MultimediaType = MultimediaType.Photo,
+                                                Url = "./Content/Images/Helensburg_Ganesha.jpg" },
+                                             new Gallery {
+                                                GalleryID = 2,
+                                                Title = "Helensburg mandal",
+                                                Description = "Helensburg mandal",
+                                                MultimediaType = MultimediaType.Video,
+                                                Url = "https://www.youtube.com/embed/AxeSG7LQP5A" }}
             });
         }
 

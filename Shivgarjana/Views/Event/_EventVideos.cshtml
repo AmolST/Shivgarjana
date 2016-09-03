@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<Shivgarjana.Models.Event.Gallery>
+
+<div class="container">
+    <h3> Videos </h3>
+    <div class="row">
+        @foreach (var gallery in Model)
+        {
+            <div class= "col-md-4">
+                <iframe class="" src="@Url.Content(gallery.Url)"></iframe>
+            </div>
+        }
+     </div>
+</div>

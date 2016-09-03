@@ -4,7 +4,7 @@
     <div class="panel-heading">
         <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="accordion" href="#@Model.EventID">
-            <span class="text-uppercase"> @Html.DisplayTextFor(m => m.Title)</span>
+            <span class="text-uppercase"> @Html.DisplayFor(m => m.Title)</span>
         </a>    
             @if (Model.DateTime > DateTime.Now)
             {
@@ -20,14 +20,17 @@
     <div id="@Model.EventID" class="panel-collapse collapse ">
         <div class="panel-body">
             <div>
-                @Html.DisplayTextFor(m => m.Description)
+                @Html.DisplayFor(m => m.Description)
             </div>
             <div>
                 @Html.LabelFor(m => m.DateTime)
-                @Html.DisplayTextFor(m => m.DateTime)
+                @Html.DisplayFor(m => m.DateTime)
             </div>
-            <div class="pull-right">
-                <img src="@Url.Content(Model.Gallery.Url)" alt="@Model.Gallery.Title" class="img-rounded img-responsive" width="400"  height="400"/>
+            <div >
+                @Html.Partial("_EventPhotos", Model.Media.Where(m => m.MultimediaType == Shivgarjana.Models.Event.MultimediaType.Photo))
+            </div>
+            <div>
+                @Html.Partial("_EventVideos", Model.Media.Where(m => m.MultimediaType == Shivgarjana.Models.Event.MultimediaType.Video))
             </div>
         </div>
     </div>

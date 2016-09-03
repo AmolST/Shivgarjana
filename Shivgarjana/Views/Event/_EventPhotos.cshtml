@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Shivgarjana.Models.Event.Gallery>
+
+<div class="container">
+    <div class="row">
+        @foreach (var gallery in Model)
+        {
+            <span>
+                <img src="@Url.Content(gallery.Url)" alt="@gallery.Title" class="img-rounded img-responsive" width="400" height="400" />
+            </span>
+        }
+     </div>
+</div>

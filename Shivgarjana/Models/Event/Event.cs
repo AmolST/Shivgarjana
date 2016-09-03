@@ -16,9 +16,11 @@ namespace Shivgarjana.Models.Event
         public string Description { get; set; }
         [Display(Name = "Where")]
         public Location Location { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         [Display(Name = "When")]
         public DateTime DateTime { get; set; }
-        public Gallery Gallery { get; set; }
+        public List<Gallery> Media { get; set; }
     }
 
    
