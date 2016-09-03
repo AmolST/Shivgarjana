@@ -4,13 +4,31 @@
     <div class="panel-heading">
         <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="accordion" href="#@Model.EventID">
-            @Html.DisplayTextFor(m => m.Title)
-        </a>            
+            <span class="text-uppercase"> @Html.DisplayTextFor(m => m.Title)</span>
+        </a>    
+            @if (Model.DateTime > DateTime.Now)
+            {
+                <span class="label label-warning pull-right">Upcoming</span>
+            }
+            else
+            {
+                <span class="label label-success pull-right">Past</span>
+            }
+
         </h4>
     </div>
     <div id="@Model.EventID" class="panel-collapse collapse ">
         <div class="panel-body">
-            @Html.DisplayTextFor(m => m.Description)
+            <div>
+                @Html.DisplayTextFor(m => m.Description)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.DateTime)
+                @Html.DisplayTextFor(m => m.DateTime)
+            </div>
+            <div class="pull-right">
+                <img src="@Url.Content(Model.Gallery.Url)" alt="@Model.Gallery.Title" class="img-rounded img-responsive" width="400"  height="400"/>
+            </div>
         </div>
     </div>
 </div>

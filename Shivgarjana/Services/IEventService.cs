@@ -20,7 +20,7 @@ namespace Shivgarjana.Services
         
         public List<Event> GetAllEvents()
         {
-            return eventSeed.GetAllEvents();
+            return eventSeed.GetAllEvents().OrderByDescending(e => e.DateTime).ToList();
         }
 
         public void AddEvent(Event eventInstance)
