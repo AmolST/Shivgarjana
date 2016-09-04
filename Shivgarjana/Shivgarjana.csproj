@@ -189,6 +189,7 @@
     <Content Include="Views\Event\_EventDetails.cshtml" />
     <Content Include="Views\Event\_EventPhotos.cshtml" />
     <Content Include="Views\Event\_EventVideos.cshtml" />
+    <Content Include="Views\Event\_EventLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

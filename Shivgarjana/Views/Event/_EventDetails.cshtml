@@ -26,6 +26,10 @@
                 @Html.LabelFor(m => m.DateTime)
                 @Html.DisplayFor(m => m.DateTime)
             </div>
+            <div>
+                @Html.LabelFor(m => m.Location)
+               @Html.Partial("_EventLocation", Model.Location)
+            </div>
             <div >
                 @Html.Partial("_EventPhotos", Model.Media.Where(m => m.MultimediaType == Shivgarjana.Models.Event.MultimediaType.Photo))
             </div>

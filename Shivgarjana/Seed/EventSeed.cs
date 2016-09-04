@@ -25,10 +25,12 @@ namespace Shivgarjana.Seed
                 Media = new List<Gallery> {
                                             new Gallery {
                                                 GalleryID = 1,
-                                                Title = "Telagu mandal",
+                                                Title = "Telugu Association Inc Sydney",
                                                 Description = "Telagu mandal",
                                                 MultimediaType = MultimediaType.Photo,
-                                                Url = "./Content/Images/Telagu_Mandal_Ganesha.jpg" } }
+                                                Url = "http://www.trueindia.com.au/GetImage.ashx?id=330&value=event&h=0&w=0"
+                                                //Url = "./Content/Images/Telagu_Mandal_Ganesha.jpg"
+                                            } }
             });
 
             Events.Add(new Event
